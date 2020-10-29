@@ -1,0 +1,48 @@
+{
+  "name": "marketplace",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^23.0.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-regular-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.2",
+    "chart.js": "^2.9.3",
+    "cleave.js": "^1.6.0",
+    "file-loader": "^6.1.0",
+    "node-sass": "^4.14.1",
+    "nuxt": "^2.14.0",
+    "nuxt-dropzone": "^1.0.4",
+    "nuxt-fontawesome": "^0.4.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "vue-audio-visual": "^2.2.0",
+    "vue-chartjs": "^3.5.1",
+    "vue-ckeditor5": "^0.5.0",
+    "vue-js-modal": "^2.0.0-rc.6",
+    "vue-loader": "^15.9.3",
+    "vue-slick-carousel": "^1.0.6",
+    "vue-social-sharing": "^3.0.2",
+    "vue-sweetalert2": "^3.0.8",
+    "vue-the-mask": "^0.11.1",
+    "vuejs-paginate": "^2.1.0"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^2.1.0"
+  }
+}

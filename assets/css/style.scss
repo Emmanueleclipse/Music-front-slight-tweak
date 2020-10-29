@@ -1,0 +1,308 @@
+ 
+ html{
+   font-family: 'Helvetica Neue'  !important;
+ }
+ :root{
+    --color-primary: #0E3D67;
+    --color-secondary: #3E4855;
+    --color-muted: #B2B2B2;
+    --color-blue-500: #4285C2;
+ }
+
+ .color-primary{
+     color: var(--color-primary);
+ }
+ .bg-primary{
+     background-color: var(--color-primary);
+ }
+ .color-secondary{
+     color: var(--color-primary);
+ }
+ .color-muted{
+     color: var(--color-muted);
+    }
+.color-blue-500{
+    color: var(--color-blue-500);
+}
+
+.shadow {
+    box-shadow: 0px 0px 25px #0000001A;
+}
+.bg {
+    background: transparent linear-gradient(213deg, #4285C2 0%, #0E3D67 100%) 0% 0% no-repeat padding-box;
+}
+.btn-bg{
+    background: transparent linear-gradient(180deg, #4285C2 0%, #0E3D67 100%) 0% 0% no-repeat padding-box;
+}
+
+
+.number__appearance {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+ 
+
+.table--area {
+    tbody {
+
+        tr:nth-child(odd) {
+            background-color: #E9EFF2;
+        }
+
+    }
+
+}
+
+.table--areas { 
+
+      tbody:nth-child(2n) {
+            background-color: #E9EFF2 !important;
+        } 
+
+}
+
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    table {
+        width: 100%;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+  
+
+    td {
+        border: none; 
+        position: relative;
+        padding-left: 50% !important;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-column);
+        color: #000;
+        font-weight: bold;
+    }
+
+}   
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: #4285C2;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 10.5px;
+    left: 9px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+ box-shadow: 0px 3px 6px #00000029;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.slide-enter-active, .slide-leave-active {
+    transition: margin-bottom .8s ease-out;
+  }
+  
+  .slide-enter, .slide-leave-to {
+    margin-bottom: -200px;
+  }
+  
+  .slide-enter-to, .slide-leave {
+    margin-bottom: 0px;
+  }
+
+  .overlay {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.hover__area:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loader-parent{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    background-color: transparent;
+    border: 5px solid #ECEFF1;
+    border-radius: 50%;
+  }
+  .loader:after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #7986CB transparent transparent transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    animation: ringrotate .8s infinite ease-in-out;
+    -webkit-animation: ringrotate .8s infinite ease-in-out;
+  }
+  
+/* Animation */
+@keyframes ringrotate {
+    0% {
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+      -webkit-transform: rotateZ(360deg);
+    }
+  }
+  @-webkit-keyframes ringrotate {
+    0% {
+      transform: rotateZ(0deg);
+      -webkit-transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+      -webkit-transform: rotateZ(360deg);
+    }
+  }
+  
+  
+  .loadersm{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+  }
+  
+.loader-sm{
+    border-top:2px solid #fff;
+    border-right:2px solid transparent;
+    animation: loadersm 800ms linear infinite;
+  }
+  
+  @keyframes loadersm{
+    to{ 
+      transform:rotate(360deg);
+    }
+  }
+
+  /**
+    start coding for pagination
+  */
+
+  .pagination{ 
+    display: none;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #e7e7e7;
+    overflow: hidden;
+      li{
+        padding: 0 !important;
+        border-right: 1px solid #e7e7e7;
+        &:last-child{
+          border-right: 0;
+        }
+        a{
+          padding:10px 15px;
+          background: white;
+          display: block;
+          color: #666666;
+          &:hover{
+            background-color: #f3f3f3;
+          }
+          &:focus{
+            outline: none;
+            box-shadow: none;
+          }
+        }
+      } 
+}
+.pagination .active a{
+  background-color: #f3f3f3;
+}
+button:focus{
+  box-shadow: none;
+  outline: none;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: all .25s ease-out;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
